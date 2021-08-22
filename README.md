@@ -1,6 +1,6 @@
 # kotlin-hello-grpc
 
-A very simple sample gRPC server application written using Kotlin.
+A very simple gRPC server application sample written using Kotlin.
 
 ## TLS
 
