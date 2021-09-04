@@ -70,11 +70,13 @@ sourceSets {
     }
 }
 
+// task to build a jar artifact
 tasks.withType<Jar> {
     archiveBaseName.set("hello-grpc")
     manifest {
         attributes["Main-Class"] = "com.jviniciusb.hellogrpc.ApplicationKt"
     }
+    // required to create a fat jar
     from(configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) })
 }
 

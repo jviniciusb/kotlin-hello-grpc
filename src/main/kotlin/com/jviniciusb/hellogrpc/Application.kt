@@ -5,7 +5,7 @@ import com.jviniciusb.hellogrpc.grpc.services.GreeterGrpcService
 
 fun main() {
     GrpcServerFactory.create(config = {
-        useTransportSecurity = true
+        useTransportSecurity = false
         services = listOf(GreeterGrpcService())
     }).start()
 }
