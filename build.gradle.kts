@@ -83,3 +83,13 @@ tasks.withType<Jar> {
 tasks.test {
     useJUnit()
 }
+
+// required grant that stage task follows the order clean -> build
+tasks.build {
+    mustRunAfter("clean")
+}
+
+// stage task for heroku
+tasks.register<DefaultTask>("stage") {
+    dependsOn("clean", "build")
+}
