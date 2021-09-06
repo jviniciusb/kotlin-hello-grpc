@@ -1,6 +1,5 @@
 import com.google.protobuf.gradle.*
 
-val kotlinVersion: String by project
 val grpcVersion: String by project
 val grpcKotlinVersion: String by project
 val coroutinesVersion: String by project
@@ -12,7 +11,7 @@ buildscript {
 }
 
 plugins {
-    kotlin("jvm") version "1.5.21"
+    kotlin("jvm") version "1.5.30"
     id("com.google.protobuf") version "0.8.17"
 }
 
